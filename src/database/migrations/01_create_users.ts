@@ -9,6 +9,7 @@ export async function up(knex: Knex) {
     table.string('bio').notNullable();
 
     table.integer('login_id')
+      .unsigned()
       .notNullable()
       .references('id')
       .inTable('logins')
