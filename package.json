@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "node dist/src/server.js",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
   },
   "devDependencies": {
