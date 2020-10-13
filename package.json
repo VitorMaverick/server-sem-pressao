@@ -4,11 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "ts:watch": "tsc -w",
-    "ts:build": "tsc",
-    "build": "npm run ts:build",
-    "prod:serve": "node dist/src/server.js",
-    "start": "npm run build && npm run prod:serve",
+    "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
   },
   "devDependencies": {
