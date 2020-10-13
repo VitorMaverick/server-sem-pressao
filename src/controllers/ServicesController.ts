@@ -55,7 +55,7 @@ export default class ClassesController {
       item.schedule = await db('schedule').select('*').from('schedule').where('user_id', item.id).orderBy(item.id)  
      });
      const query1 = services.map(async (item:any) => {
-      item.service = await db('services').select('*').from('services').where('user_id', item.id).orderBy(item.id)  
+      item.services = await db('services').select('*').from('services').where('user_id', item.id).orderBy(item.id)  
      });
 
    await Promise.all(query1)
